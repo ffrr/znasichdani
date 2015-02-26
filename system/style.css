@@ -58,6 +58,7 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .help .close				{ position:absolute; right:5px; top:5px; width:20px; height:20px; overflow:hidden; }
 
 .x							{ background-color:#f40; color:#fff; padding:40px; text-align:center; }
+.x a						{ color:#fff; text-decoration:underline; }
 
 
 /* HEADER */
@@ -186,8 +187,9 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #pie						{ background-color:#1f5a6b; }
 #pie li						{ width:auto; padding-bottom:0; }
 #pie .hidden				{ display:none; }
-#pie label					{ padding-left:25px; width:160px; }
+#pie label					{ padding-left:25px; width:150px; }
 #pie label i				{ font-weight:normal; font-style:normal; opacity:0.5; }
+#pie label svg				{ width:12px; height:12px; display:block; float:left; margin-top:3px; margin-right:3px; }
 #pie input					{ display:none; }
 #pie label:before			{ content:url('svg/check-off.svg'); width:15px; height:15px; margin-left:-25px; display:block; float:left; }
 #pie .active label:before	{ content:url('svg/check-on.svg'); }
@@ -229,20 +231,22 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #mobile .timeline			{ background-color:#378; border-radius:4px; margin:5px 0; position:relative; height:8px; }
 #mobile .timeline div		{ height:8px; border-radius:4px; width:0; position:absolute; top:0; }
 #years						{ background-color:#145; }
-#years a					{ color:#fff; font-size:15px; font-weight:normal; line-height:50px; }
-#years a svg				{ margin-top:15px; }
-#years>*					{ width:33.33333%; height:50px; }
+#years a					{ color:#fff; font-size:15px; font-weight:normal; line-height:50px; display:block; float:left; width:100%; }
+#years a svg				{ margin-top:15px; float:left; }
+#years>*					{ height:50px; }
 #years h3					{ font-size:20px; text-align:center; }
 #years h3 i					{ font-weight:normal; font-style:normal; opacity:0.5; }
-#years div:last-child a		{ float:right; }
+#years div					{ position:absolute; top:0; left:0; width:auto; white-space:nowrap; width:50%; padding-left:10px; padding-right:10px; }
+#years div:last-child		{ right:0; left:auto; text-align:right; }
+#years div:last-child svg	{ float:right; }
 
 /* FOOTER */
 
 
 footer						{ position:relative; }
 footer div div				{ width:20%; padding-right:20px; }
-footer img					{ width:60px; height:auto; display:block; position:absolute; top:0; right:50px; }
-
+#medal						{ width:60px; height:auto; display:block; float:left; position:absolute; top:0; right:50px; }
+#medal div					{ font-weight:normal; }
 
 /* RESPONSIVE */
 
@@ -284,6 +288,7 @@ h2							{ font-size:24px; letter-spacing:-1px; }
 #name h2					{ width:100%; }
 #pie label					{ padding-left:0; }
 #pie label:before			{ content:''; display:none; }
+#pie .company:not(.active)	{ opacity:0.5; }
 #stripe						{ margin-top:15px; }
 .text>*, .offset			{ width:100% !important; padding-left:0 !important; }
 footer div div				{ width:100%; }
@@ -291,7 +296,7 @@ footer div div				{ width:100%; }
 
 @media screen and (max-width: 320px) {
 #top-people li				{ width:50%; }
-#pie li						{ width:50%; }
+#pie li						{ width:50%; padding-right:0; }
 #pie label					{ width:100%; }
 #top-people .n3, #top-people .n5	{ clear:left; }
 #top-people .n4				{ clear:none; }

@@ -1,6 +1,6 @@
 <?php
-$remote		= 'http://www.urtd.net/x/zndlive/';
-$local		= 'http://localhost:8888/Work/Znasichdani/live/';
+$remote		= 'http://www.urtd.net/x/znasichdani/';
+$local		= 'http://localhost:8888/Work/Znasichdani/znasichdani/';
 $root		= $_SERVER['SERVER_NAME']=='localhost' ? $local : $remote;
 
 $var1		= !empty($_GET['var1']) ? $_GET['var1'] : 'home';
@@ -21,13 +21,18 @@ include('system/functions.php');
 		<title>Z našich daní</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-		<link href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="system/style.css"/>
+		<link rel="stylesheet" type="text/css" media="screen" href="system/fancybox/jquery.fancybox.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	</head>
 	
-	<body><span style="position:fixed; top:0; left:0; z-index:10000; background-color:#fff;"></span>
+	<body>
 	
+		<!--[if lt IE 8]>
+			<div class="x">Táto stránka nie je optimalizovaná pre prehliadač Internet Explorer 7 alebo starší. Prosím, nainštalujte si <a href="http://www.whatbrowser.org/intl/sk/">moderný prehliadač.</a></div>
+		<![endif]-->
+
 		<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 		
 		<header>
@@ -53,7 +58,7 @@ include('system/functions.php');
 					<div><b>Aliancia Fair-play</b><br/>Smrečianska 21<br/>811 05 Bratislava</div>
 					<div><b>+421 220 739 919</b><br/>V pracovné dni medzi 10.00 a 18.00</div>
 					<div><a href="mailto:znasichdani@fair-play.sk">znasichdani@fair-play.sk</a></div>
-					<img src="system/open_data_challenge.png" alt="Open Data Challenge 1st Place"/>
+					<a href="http://fair-play.sk/articles/ts-znasichdani-sk-je-najlepsou-europskou-aplikaciou" target="_blank" id="medal" class="help"><div>The best open-data app according to the biggest EU open-data competition.</div><img src="system/open_data_challenge.png" alt="Open Data Challenge 1st Place"/></a>
 				</span>
 			</div>
 			<ul class="services">
@@ -70,6 +75,8 @@ include('system/functions.php');
 		</footer>
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="system/fancybox/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="system/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 		<script type="text/javascript" src="system/jquery.tablesorter.min.js"></script>
 		<script type="text/javascript" src="system/jquery.stickem.js"></script>
 		<script type="text/javascript" src="system/functions.js"></script>

@@ -20,6 +20,16 @@ $(document).ready(function(){
 	
 	$('#data table').tablesorter( {sortList:[[0,0]]} );
 	
+	$('.fancybox').fancybox({
+		padding:		10,
+		openEffect:		'none',
+		closeEffect:	'none',
+		helpers: {
+			media:		{},
+			overlay:	{css: {'background' : 'rgba(255, 255, 255, 0.8)'}}
+		}
+	});
+	
 	
 	// PIE
 	
@@ -113,6 +123,13 @@ $(document).ready(function(){
 		$(this).parent().fadeOut(100);
 	});
 	
+	$('#medal').hover(function() {
+		target = $(this).find('div');
+		moveHelp(target);
+		target.fadeIn(100);
+	},function() {
+		target.fadeOut();
+	});
 	//$('#data section').addClass('stickem-container');
 	//$('#data section h3').addClass('stickem');
 	//$('#data').stickem();

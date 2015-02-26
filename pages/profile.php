@@ -2,6 +2,7 @@
 foreach($data_graph as $co => $data) { $total+= array_sum($data[0]); }
 
 $limit	= 80; // zoskupí firmy zarábajúce zvyšných (100 - $limit)% do jednej položky
+$count	= 4;
 $bars	= 25;
 $n		= 0;
 $year	= $_GET['year'] ? $_GET['year'] : date('Y')-1;
@@ -16,7 +17,8 @@ foreach($data_graph as $co => $data) {
 	$_sum			= comma($sum).' €';
 	$_limit			= $sum_run/$total*100;
 	
-	if($_limit > $limit) {
+	//if($_limit > $limit) {
+	if($n >= $count) {
 		$group_sum+= $sum;
 		$active = '';
 		$group_count	+= 1;
@@ -36,10 +38,12 @@ foreach($data_graph as $co => $data) {
 	$color	= " style=\"color:#$data_colors[$n]\"";
 	$bcolor	= " style=\"background-color:#$data_colors[$n]\"";
 	
+	$bullet = "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"12px\" height=\"12px\" viewBox=\"0 0 12 12\" enable-background=\"new 0 0 12 12\" xml:space=\"preserve\"><circle cx=\"6\" cy=\"6\" r=\"6\" fill=\"#$data_colors[$n]\"/></svg>";
+	
 	// labels
-	$labels.= "<li class=\"$active $hidden\">
+	$labels.= "<li class=\"company $active $hidden\">
 		<label>
-			<input type=\"checkbox\" name=\"$n\" data-sum=\"$sum\"><b$color>$co<br/>{$percent}%</b> $_sum
+			<input type=\"checkbox\" name=\"$n\" data-sum=\"$sum\"><b$color>$bullet $co<br/>{$percent}%</b> $_sum
 		</label>
 	</li>";
 	
@@ -100,7 +104,7 @@ foreach($data_graph as $co => $data) {
 
 if($toggle) {
 	
-	$labels.= "<li id=\"group\" class=\"active group\">
+	$labels.= "<li id=\"group\" class=\"company active group\">
 		<label>
 			<input type=\"checkbox\" name=\"group\" data-sum=\"$group_sum\"><b style=\"color:#fff\">Ostatné firmy <i>$group_count</i><br/>".round($group_sum/$total * 100)."%</b> ".comma($group_sum)." €
 		</label>
@@ -170,8 +174,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 	</section>
 	
 	<section class="mobile active">
-		<a name="years" class="anchor"></a>
-		<div id="years" class="block"><?php echo "<div>$year_prev</div><h3>$year<br/><i>".comma($year_total)." €</i></h3><div>$year_next</div>" ?></div>
+		<div id="years" class="block"><?php echo "<div class=\"block\">$year_prev</div><h3>$year<br/><i>".comma($year_total)." €</i></h3><div class=\"block\">$year_next</div>" ?></div>
 		<ul id="mobile"><?php echo $mobile; ?></ul>
 		<div class="block">* Pôsobenie na danej pozícii bolo v minulosti dočasne prerušené.</div>
 	</section>

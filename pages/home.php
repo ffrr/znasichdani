@@ -14,7 +14,7 @@
 			<div id="top-people">
 				Najčastejšie vyhľadávané osoby
 				<ul>
-					<?php foreach($top_people as $i) { $n+=1; echo "<li class=\"n$n\"><a href=\"{$root}results?q=$i\">$i</a></li>"; } ?>
+					<?php foreach($top_people as $i) { $n+=1; echo "<li class=\"n$n\"><a href=\"{$root}profile?q=$i\">$i</a></li>"; } ?>
 				</ul>
 			</div>
 		</li>
@@ -28,7 +28,7 @@
 		</li>
 	</ul>
 	
-	<a href="#" id="play" class="desktop"><?php sprite('play'); ?> Videonávod</a>
+	<a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" id="play" class="fancybox desktop"><?php sprite('play'); ?> Videonávod</a>
 
 </section>
 

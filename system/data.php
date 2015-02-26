@@ -149,6 +149,12 @@ $data_graph			= array(
 			'Štatutár' => '2010-07-01:',
 		),
 	),
+	'Škridplech, a. s.'	=> array(
+		array(1,0,1,1,0),
+		array(
+			'Štatutár' => '2010-07-01:',
+		),
+	),
 );
 
 ?>
