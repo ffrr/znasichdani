@@ -24,7 +24,7 @@ function help($title,$text,$prev = true,$next = true) {
 	$prev = $prev ? "<a href=\"#\" class=\"icon prev\">".sprite('show-less',true)."Späť</a>" : '';
 	$next = $next ? "<a href=\"#\" class=\"icon next\">Ďalej".sprite('show-more',true)."</a>" : '';
 	echo "
-	<div class=\"help desktop\">
+	<div class=\"help tour desktop\">
 		<span>?</span>
 		<div id=\"help-$helpID\">
 			<strong>$title</strong><br/>$text
@@ -50,6 +50,7 @@ function generateTable($head,$data) {
 		echo "<tr>";
 		foreach($i as $n) {
 			$class = strpos($n,'EUR') || strpos($n,'SKK') ? " class=\"right\"" : '';
+			if(strpos($n,'-VZT') || strpos($n,'-VST')) { $n = "<a href=\"#\" class=\"icon\">$n ".sprite('external',true)."</a>"; }
 			echo "<td$class>$n</td>";
 		}
 		echo "</tr>";

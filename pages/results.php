@@ -38,7 +38,7 @@
 			}
 			?>
 		</ul>
-		<div class="more block"><a href="#">Načítať ďalších 5 výsledkov</a></div>
+		<div class="block"><a href="#" class="button">Načítať ďalších 5 výsledkov</a></div>
 	</div>
 	<div class="block" id="notes">
 		<?php

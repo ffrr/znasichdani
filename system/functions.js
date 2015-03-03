@@ -99,8 +99,8 @@ $(document).ready(function(){
 	}
 	
 	
-	$('header .menu-help').click(function() {
-		$('.help>div').hide();
+	$('header .menu-help, #overlay .button').click(function() {
+		$('.help>div,#overlay').hide();
 		$('#help-0').fadeIn(100);
 		scrollTo($('#help-0'));
 	});
@@ -110,7 +110,7 @@ $(document).ready(function(){
 		$(this).next('div').fadeIn(100);
 	});
 	$('.help div span a').click(function() {
-		var count = $('.help').length;
+		var count = $('.tour').length;
 		var thisID	= $(this).parent().parent().attr('id');
 		var id		= thisID.split('-');
 		if($(this).hasClass('prev')) { var move = -1; } else { var move = 1; }

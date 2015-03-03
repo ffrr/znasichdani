@@ -45,8 +45,11 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .services li a				{ line-height:20px; color:#fff; text-align:center; padding:10px; }
 .services svg				{ width:20px; height:20px; fill:#fff; display:inline-block; float:none; vertical-align:top; }
 
+#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#fff; background-color:rgba(255,255,255,0.75); }
+#overlay div				{ box-shadow:0 5px 10px rgba(0,0,0,0.25); border-radius:5px; padding:20px; font-size:15px; background-color:#fff; width:400px; height:250px; position:absolute; top:50%; left:50%; margin-top:-125px; margin-left:-200px; }
+#overlay a					{ width:auto; position:absolute; bottom:20px; right:20px; margin:0; }
 .help						{ display:inline-block; float:none; margin:0 5px; vertical-align:middle; width:20px; height:20px; position:relative; }
-.help>span					{ background-color:#fff; color:#267; width:100%; height:100%; font-weight:bold; font-size:13px; line-height:20px; display:block; float:left; text-align:center; border-radius:10px; cursor:pointer; }
+.help>span					{ background-color:#fff; color:#267; width:100%; height:100%; font-weight:bold; font-size:13px; line-height:20px; display:block; float:left; text-align:center; border-radius:10px; cursor:pointer; position:relative; z-index:1; }
 .help div					{ display:none; position:absolute; width:250px; background-color:#fff; color:#267; border-radius:5px; left:30px; top:-10px; text-align:left; padding:10px 15px; font-size:13px; z-index:10000; box-shadow:0 5px 10px rgba(0,0,0,0.25); }
 .help div:after				{ content:url('svg/beak.svg'); width:12px; height:12px; position:absolute; left:-6px; top:12px; }
 .help div.alt:after			{ content:url('svg/beak.svg'); left:auto; right:-6px; }
@@ -56,6 +59,24 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .help .prev, .help .next	{ display:block; float:left; width:50%; }
 .help .next					{ text-align:right; float:right; }
 .help .close				{ position:absolute; right:5px; top:5px; width:20px; height:20px; overflow:hidden; }
+.help:after					{ content:''; border:10px solid #fff; border-radius:20px; height:40px; width:40px; position:absolute; z-index:0; left:-10px; top:-10px; opacity:0; background:transparent;
+	-webkit-animation:pulse 1s ease-out;
+	-moz-animation:pulse 1s ease-out;
+	animation:pulse 1s ease-out;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+}
+@-moz-keyframes pulse {
+	0% { -moz-transform:scale(0); opacity:0; }
+	50% { -moz-transform:opacity:0.5; }
+	100% { -moz-transform:scale(1); opacity:0; }
+}
+@-webkit-keyframes pulse {
+	0% { -webkit-transform:scale(0); opacity:0; }
+	50% { -webkit-transform:scale(0.8); opacity:0.5; }
+	100% { -webkit-transform:scale(1); opacity:0; }
+}
 
 .x							{ background-color:#f40; color:#fff; padding:40px; text-align:center; }
 .x a						{ color:#fff; text-decoration:underline; }
@@ -150,9 +171,8 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #results .expand.active a:before	{ content:url('svg/list-on.svg'); }
 #results .download			{ width:20%; float:right; text-align:right; }
 #results .download a		{ font-weight:normal; }
-.more						{ text-align:center; }
-.more a						{ background-color:#c2e3e8; font-size:18px; font-weight:normal; display:inline-block; border-radius:5px; padding:10px 20px; }
-.more a:hover				{ background-color:#ebf6f8; }
+.button						{ background-color:#c2e3e8; font-size:15px; font-weight:normal; display:block; float:none; margin:20px auto; width:250px; text-align:center; border-radius:5px; padding:10px 20px; }
+.button:hover				{ background-color:#ebf6f8; }
 
 #notes p					{ margin-bottom:20px; }
 #notes .question			{ font-size:15px; font-weight:bold; padding-left:30px; position:relative; }
@@ -218,6 +238,8 @@ header li a.active			{ font-weight:bold; color:#fff; }
 .headerSortDown:before		{ content:url('svg/sort-down.svg'); width:10px; height:10px; margin-right:5px; }
 #data th a.active, #data th a:hover	{ color:#fff; }
 #data tbody tr:nth-child(odd) td { background-color:#1f5a6b; }
+#data td a					{ color:#fff; font-weight:normal; }
+#data td a:hover			{ color:#93cbd3; }
 
 #data .download				{ color:#fff; font-weight:normal; position:absolute; top:20px; right:20px; display:none; }
 #data .download svg			{ fill:#fff; }
@@ -239,6 +261,7 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #years div					{ position:absolute; top:0; left:0; width:auto; white-space:nowrap; width:50%; padding-left:10px; padding-right:10px; }
 #years div:last-child		{ right:0; left:auto; text-align:right; }
 #years div:last-child svg	{ float:right; }
+
 
 /* FOOTER */
 

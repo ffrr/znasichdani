@@ -6,6 +6,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="beak" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
 <rect x="1.757" y="1.757" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.4849 5.9999)" fill="#FFFFFF" width="8.485" height="8.485"/>
 </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="bullet" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+<circle cx="6" cy="6" r="6"/>
+</svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="check-off" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
 <g>
 	<g>
@@ -32,6 +35,11 @@
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="email" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
 <path d="M9.5,6c1.225,0,2.024,0.6,2.5,1.5V6h2v4.75c0,0.925,0.2,1.25,0.699,1.25c0.926,0,1.302-1.351,1.302-2.95  c0-2.975-2.276-5.05-5.826-5.05C6.55,4,4,6.45,4,10c0,3.525,2.7,6.001,6.5,6.001c3.5,0,5.501-1.751,5.501-1.751v2.125  c0,0-2.001,1.625-5.501,1.625C5.125,18,2,14.5,2,10c0-4.575,3.55-8,8.175-8C14.75,2,18,5.05,18,9.05C18,12,16.675,14,14.475,14  c-1.149,0-1.975-0.575-2.324-1.85C11.725,13.275,10.9,14,9.5,14C7.325,14,6,12.2,6,10C6,7.8,7.325,6,9.5,6z M10,12  c1.149,0,1.925-0.8,2-1.825V9.85C11.925,8.825,11.149,8,10,8C8.775,8,8,8.9,8,10C8,11.1,8.775,12,10,12z"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="external" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
+<polyline fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="13.5,10 13.5,14.5 5.5,14.5 5.5,6.5 10,6.5 "/>
+<polygon fill="#FFFFFF" points="16,9 16,4 11,4 "/>
+<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="15" y1="5" x2="9.5" y2="10.5"/>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="facebook" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
 <path d="M17,16c0,0.553-0.447,1-1,1H4c-0.552,0-1-0.447-1-1V4c0-0.552,0.448-1,1-1h12c0.553,0,1,0.448,1,1V16z M10,17h2v-5h2v-2h-2  V8h2V6h-2.001C10.549,6,10,6.599,10,7.999V10H8v2h2V17z"/>

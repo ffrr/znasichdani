@@ -126,6 +126,14 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 ?>
 
 
+<div id="overlay">
+	<div>
+		<b>Toto je stránka výsledkov.</b><br/><br/>Pre správne porozumenie vám odporúčame pozrieť si nápovedu. Nápovedu môžete zobraziť kedykoľvek kliknutím na odkaz “Potrebujete pomoc” v hlavnom menu alebo kliknutím na ikonku otáznika.
+		<a href="#" class="button">Zobraziť výsledky</a>
+	</div>
+</div>
+
+
 <ul class="services mobile">
 	<li><a href="#">Podrobné dáta nájdete vo full verzii stránky</a></li>
 </ul>

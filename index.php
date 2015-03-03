@@ -23,6 +23,9 @@ include('system/functions.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="shortcut icon" href="favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="system/style.css"/>
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" type="text/css" href="system/ie.css"/>
+		<![endif]-->
 		<link rel="stylesheet" type="text/css" media="screen" href="system/fancybox/jquery.fancybox.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	</head>
