@@ -21,14 +21,15 @@ function comma($num,$decimal = ',',$thousand = ' ') {
 function help($title,$text,$prev = true,$next = true) {
 	global $helpID;
 	if(!isset($helpID)) { $helpID = 0; }
-	$prev = $prev ? "<a href=\"#\" class=\"icon prev\">".sprite('show-less',true)."Späť</a>" : '';
-	$next = $next ? "<a href=\"#\" class=\"icon next\">Ďalej".sprite('show-more',true)."</a>" : '';
+	$prev	= $prev ? "<a href=\"#\" class=\"icon prev\">".sprite('show-less',true)."Späť</a>" : '';
+	$next	= $next ? "<a href=\"#\" class=\"icon next\">Ďalej".sprite('show-more',true)."</a>" : '';
+	$end	= "<a href=\"#\" class=\"icon end\">Ukončiť</a>";
 	echo "
 	<div class=\"help tour desktop\">
 		<span>?</span>
 		<div id=\"help-$helpID\">
 			<strong>$title</strong><br/>$text
-			<span>$prev$next</span>
+			<span>$prev$next$end</span>
 			<a href=\"#\" class=\"icon close\">".sprite('close',true)."Zavrieť</a>
 		</div>
 	</div>";
@@ -56,6 +57,18 @@ function generateTable($head,$data) {
 		echo "</tr>";
 	}
 	echo "</tbody></table>";
+}
+
+function list_companies($data,$label,$limit) {
+	if(!empty($data)) {
+		$data = explode(';',$data);
+		if(count($data) > $limit + 1) {
+			$list = implode('<br/>',array_slice($data,0,$limit)).'<br/><span>'.implode('<br/>',array_slice($data,$limit)).'</span>';
+		} else {
+			$list = implode('<br/>',$data);
+		}
+		return("<div><b>$label</b> <i>(".count($data).")</i><div>$list</div></div>");
+	}
 }
 
 function generateSprite() {

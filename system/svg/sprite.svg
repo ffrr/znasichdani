@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="back" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="arrow-left" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
+<polyline fill="none" stroke-width="2" stroke-miterlimit="10" points="14,1 5,10 14,19 "/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="arrow-right" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
+<polyline fill="none" stroke-width="2" stroke-miterlimit="10" points="5,19 14,10 5,1 "/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="back" x="0px" y="0px" viewBox="0 0 20 20" xml:space="preserve">
 <g>
 	<polygon points="13.543,20.207 3.336,10 13.543,-0.207 14.957,1.207 6.164,10 14.957,18.793  "/>
 </g>

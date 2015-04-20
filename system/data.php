@@ -56,7 +56,7 @@ array(
 	'Strmý Vŕšok 8137/137, 84106 Bratislava-Záhorská Bystrica',
 	'1004037141',
 	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;Rajo, a.s.',
-	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.',
+	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.',
 ),
 array(
 	'Strmý Vŕšok 8137/137, 84106 Bratislava',
@@ -68,7 +68,7 @@ array(
 	'Strmý Vŕšok 8137/137, 84106 Bratislava-Záhorská Bystrica',
 	'0',
 	'',
-	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.',
+	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.',
 ),
 array(
 	'Strmý Vŕšok 8137/137, 84106 Bratislava-Záhorská Bystrica',
@@ -80,7 +80,7 @@ array(
 	'Strmý Vŕšok 8137/137, 84106 Bratislava-Záhorská Bystrica',
 	'0',
 	'',
-	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.',
+	'CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.;Plastika, a.s.;VÁHOSTAV - SK, a.s.;CHEMOLAK a.s.',
 ),
 );
 

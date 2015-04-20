@@ -45,8 +45,8 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .services li a				{ line-height:20px; color:#fff; text-align:center; padding:10px; }
 .services svg				{ width:20px; height:20px; fill:#fff; display:inline-block; float:none; vertical-align:top; }
 
-#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#fff; background-color:rgba(255,255,255,0.75); }
-#overlay div				{ box-shadow:0 5px 10px rgba(0,0,0,0.25); border-radius:5px; padding:20px; font-size:15px; background-color:#fff; width:400px; height:250px; position:absolute; top:50%; left:50%; margin-top:-125px; margin-left:-200px; }
+#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#57a1af; background-color:rgba(87,161,175,0.9); }
+#overlay div				{ box-shadow:0 5px 10px rgba(0,0,0,0.25); border-radius:5px; padding:20px; font-size:15px; background-color:#fff; width:400px; height:200px; position:absolute; top:50%; left:50%; margin-top:-125px; margin-left:-200px; }
 #overlay a					{ width:auto; position:absolute; bottom:20px; right:20px; margin:0; }
 .help						{ display:inline-block; float:none; margin:0 5px; vertical-align:middle; width:20px; height:20px; position:relative; }
 .help>span					{ background-color:#fff; color:#267; width:100%; height:100%; font-weight:bold; font-size:13px; line-height:20px; display:block; float:left; text-align:center; border-radius:10px; cursor:pointer; position:relative; z-index:1; }
@@ -57,15 +57,16 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .help a:hover				{ color:#267; }
 .help div span				{ display:block; float:left; width:100%; margin-top:10px; padding-top:10px; border-top:1px solid #c2e3e8;}
 .help .prev, .help .next	{ display:block; float:left; width:50%; }
-.help .next					{ text-align:right; float:right; }
+.help .next					{ text-align:right; float:right; font-weight:bold; color:#267; }
+.help .end					{ text-align:right; float:right; display:none; }
 .help .close				{ position:absolute; right:5px; top:5px; width:20px; height:20px; overflow:hidden; }
-.help:after					{ content:''; border:10px solid #fff; border-radius:20px; height:40px; width:40px; position:absolute; z-index:0; left:-10px; top:-10px; opacity:0; background:transparent;
+.pulse:after				{ content:''; border:10px solid #fff; border-radius:20px; height:40px; width:40px; position:absolute; z-index:0; left:-10px; top:-10px; opacity:0; background:transparent;
 	-webkit-animation:pulse 1s ease-out;
 	-moz-animation:pulse 1s ease-out;
 	animation:pulse 1s ease-out;
-	-webkit-animation-iteration-count:infinite;
-	-moz-animation-iteration-count:infinite;
-	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:10;
+	-moz-animation-iteration-count:10;
+	animation-iteration-count:10;
 }
 @-moz-keyframes pulse {
 	0% { -moz-transform:scale(0); opacity:0; }
@@ -154,25 +155,34 @@ header li a.active			{ font-weight:bold; color:#fff; }
 
 #results>div				{ width:40%; }
 #results>div:first-child	{ width:60%; border-right:1px solid #c2e3e8; }
-#results li					{ padding-bottom:0; }
+#results li					{ padding-bottom:0; padding-top:10px; }
 #results li>a				{ font-size:20px; line-height:120%; font-weight:normal; margin-bottom:10px; border-radius:5px; background-color:#ebf6f8; padding:10px; padding-right:50px; position:relative; }
 #results li>a i				{ display:block; float:left; margin-top:5px;font-size:13px; line-height:120%; font-style:normal; }
 #results li>a span			{ display:block; float:right; margin-top:10px; white-space:nowrap; }
 #results li>a:after			{ content:url('svg/view.svg'); width:20px; height:20px; position:absolute; right:10px; top:50%; margin-top:-10px; }
 #results li>a:hover			{ background-color:#c2e3e8; }
-#results .meta a			{ color:#267; }
-#results .meta i			{ font-weight:normal; font-style:normal; opacity:0.5; }
-#results .expand:not(.active) div	{ display:none; }
+#results .meta i			{ font-weight:normal; font-style:normal; opacity:1 !important; }
+#results .meta>div			{ width:40%; }
+#results .meta span			{ display:none; }
+#results .toggle			{ color:#57a1af; font-weight:normal; font-size:11px; border-top:1px solid #ebf6f8; margin-top:5px; }
+#results .toggle:hover		{ color:#267; }
+/*#results .expand:not(.active) div	{ display:none; }
 #results .expand div		{ padding-left:15px; margin-bottom:10px; }
 #results .expand			{ width:40%; }
 #results .expand a			{ margin-bottom:5px; }
 #results .expand a:hover	{ color:#145; }
 #results .expand a:before		{ content:url('svg/list-off.svg'); width:10px; height:10px; margin-right:5px; }
-#results .expand.active a:before	{ content:url('svg/list-on.svg'); }
-#results .download			{ width:20%; float:right; text-align:right; }
+#results .expand.active a:before	{ content:url('svg/list-on.svg'); }*/
+#results .download			{ width:20% !important; float:right; text-align:right; }
 #results .download a		{ font-weight:normal; }
 .button						{ background-color:#c2e3e8; font-size:15px; font-weight:normal; display:block; float:none; margin:20px auto; width:250px; text-align:center; border-radius:5px; padding:10px 20px; }
 .button:hover				{ background-color:#ebf6f8; }
+
+.nav						{ text-align:center; }
+.nav a						{ display:inline-block; float:none; vertical-align:top; width:30px; height:30px; text-align:center; border-radius:4px; line-height:30px; }
+.nav a.active				{ background-color:#267; color:#fff; }
+.nav a:not(.active):hover				{ background-color:#ebf6f8; }
+.nav svg					{ width:20px; height:20px; stroke:#267; margin:5px; }
 
 #notes p					{ margin-bottom:20px; }
 #notes .question			{ font-size:15px; font-weight:bold; padding-left:30px; position:relative; }
@@ -203,6 +213,9 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #data h3.fixed + div		{ padding-top:60px; }
 #data h3.static + div		{ padding-top:60px; }
 #data h4					{ font-size:15px; padding:20px; text-align:center; font-weight:normal; }
+
+.dim						{ position:relative; }
+.dim:before					{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; z-index:1000; display:block; float:left; background-color:#57a1af; opacity:0.9; }
 
 #pie						{ background-color:#1f5a6b; }
 #pie li						{ width:auto; padding-bottom:0; }

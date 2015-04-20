@@ -128,8 +128,8 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <div id="overlay">
 	<div>
-		<b>Toto je stránka výsledkov.</b><br/><br/>Pre správne porozumenie vám odporúčame pozrieť si nápovedu. Nápovedu môžete zobraziť kedykoľvek kliknutím na odkaz “Potrebujete pomoc” v hlavnom menu alebo kliknutím na ikonku otáznika.
-		<a href="#" class="button">Zobraziť výsledky</a>
+		<b>Toto je stránka výsledkov.</b><br/><br/>Ahoj, si tu prvýkrát, ideme ti vysvetliť, ako to tu funguje.
+		<a href="#" class="button">Začať prehliadku</a>
 	</div>
 </div>
 
@@ -140,27 +140,27 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <!-- S TENDRAMI -->
 
-<section id="main" class="block profile">
+<section id="main" class="block profile tour focus">
 	<form id="search" class="small desktop" action="" method="POST">
 		<a href="<?php echo "{$root}results?q=$q"; ?>" class="icon"><?php sprite('back'); ?> Späť</a>
 		<input type="text" name="query" value="<?php echo $q; ?>"/>
 		<input type="submit" name="submit" value="Hľadať"/>
 	</form>
 	<div id="name">
-		<h2><b><?php echo $q; ?></b></h2><?php help('Help #1','Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href=\"#\">Viac...</a>'); ?><br/>
-		Strmý Vŕšok 8137/137<br/>84106 Bratislava-Záhorská Bystrica
+		<h2><b><?php echo $q; ?></b></h2><?php help('Help #1','Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href=\"#\">Viac...</a>'); ?>
+		<div>Strmý Vŕšok 8137/137<br/>84106 Bratislava-Záhorská Bystrica</div>
 	</div>
 	<div id="sum">
 		<h2>1 004 037 141,66 €</h2><br/>
 		<b>Hodnota štátnych tendrov</b> za roky 2005 – 2013
 		<?php help('Help #2','Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href=\"#\">Viac...</a>'); ?>
 	</div>
-	<a href="#" id="share" class="icon desktop">Zdieľať <?php sprite('share'); ?></a>
+	<a href="#" id="share" class="icon desktop addthis_button_compact">Zdieľať <?php sprite('share'); ?></a>
 </section>
 
 <div id="data">
 
-	<section class="active">
+	<section class="">
 		<h3 class="desktop"><a href="#">Hodnota štátnych tendrov pre nájdené firmy <i>2005 – 2013</i></a></h3>
 		<div>
 			<div id="pie">
@@ -179,18 +179,12 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 			</div>
 			<div id="graph" class="block desktop">Tu bude graf</div>
 		</div>
-	</section>
-	
-	<section class="mobile active">
-		<div id="years" class="block"><?php echo "<div class=\"block\">$year_prev</div><h3>$year<br/><i>".comma($year_total)." €</i></h3><div class=\"block\">$year_next</div>" ?></div>
-		<ul id="mobile"><?php echo $mobile; ?></ul>
-		<div class="block">* Pôsobenie na danej pozícii bolo v minulosti dočasne prerušené.</div>
+		<a href="#" class="icon download desktop"><?php sprite('download'); ?> Stiahnuť kompletné dáta <i>CSV</i></a>
 	</section>
 
 	<section class="desktop">
 		<h3><a href="#">Ktoré verejné inštitúcie tendre organizovali?</a></h3>
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
-		<a href="#" class="icon download desktop"><?php sprite('download'); ?> Stiahnuť kompletné dáta <i>CSV</i></a>
 	</section>
 
 	<section class="desktop">
@@ -204,13 +198,17 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 			}
 			?>
 		</div>
-		<a href="#" class="icon download desktop"><?php sprite('download'); ?> Stiahnuť kompletné dáta <i>CSV</i></a>
 	</section>
 
 	<section class="desktop">
 		<h3><a href="#">Zoznam firiem spojených s osobou, ktoré neboli úspešné v štátnych tendroch</a></h3>
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
-		<a href="#" class="icon download desktop"><?php sprite('download'); ?> Stiahnuť kompletné dáta <i>CSV</i></a>
+	</section>
+	
+	<section class="mobile active">
+		<div id="years" class="block"><?php echo "<div class=\"block\">$year_prev</div><h3>$year<br/><i>".comma($year_total)." €</i></h3><div class=\"block\">$year_next</div>" ?></div>
+		<ul id="mobile"><?php echo $mobile; ?></ul>
+		<div class="block">* Pôsobenie na danej pozícii bolo v minulosti dočasne prerušené.</div>
 	</section>
 
 </div>
@@ -226,8 +224,8 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 		<input type="submit" name="submit" value="Hľadať"/>
 	</form>
 	<div id="name">
-		<h2><b><?php echo $q; ?></b></h2><br/>
-		Strmý Vŕšok 8137/137<br/>84106 Bratislava-Záhorská Bystrica
+		<h2><b><?php echo $q; ?></b></h2>
+		<div>Strmý Vŕšok 8137/137<br/>84106 Bratislava-Záhorská Bystrica</div>
 	</div>
 	<div id="sum">
 		<h2>0 €</h2><br/>
@@ -242,6 +240,5 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 	<section class="active">
 		<h3><a href="#">Zoznam firiem spojených s osobou, ktoré neboli úspešné v štátnych tendroch</a></h3>
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
-		<a href="#" class="icon download desktop"><?php sprite('download'); ?> Stiahnuť kompletné dáta <i>CSV</i></a>
 	</section>
 </div>
