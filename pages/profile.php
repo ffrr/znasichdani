@@ -177,7 +177,17 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 					<div class="label" id="total"></div>
 				</div>
 			</div>
-			<div id="graph" class="block desktop">Tu bude graf</div>
+			<div id="graph" class="znd-graph block desktop">
+				<div class="bar"></div>
+				<div class="navigable">
+					<div class="area"></div>
+			 		<div class="timeline">
+						<div class="d3-tip d3-tip-custom n">Toto je popiska kurzora.</div>
+				  	</div>    
+					<div class="pan left"><span>&lt;</span></div>
+					<div class="pan right"><span>&gt;</span></div>
+				</div>
+			</div>
 		</div>
 		<a href="#" class="icon download desktop"><?php sprite('download'); ?> Stiahnuť kompletné dáta <i>CSV</i></a>
 	</section>
@@ -215,7 +225,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <!-- BEZ TENDROV -->
 
-<div id="graph" class="x">Ak sa firmy danej osoby nezúčastnili žiadnych tendrov:</div>
+<div id="graph_" class="x">Ak sa firmy danej osoby nezúčastnili žiadnych tendrov:</div>
 
 <section id="main" class="block profile">
 	<form id="search" class="small desktop" action="" method="POST">
@@ -242,3 +252,8 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
 	</section>
 </div>
+
+<!-- graph relate -->
+
+		<script type="text/javascript" src="system/znd-graph.min.js"></script>
+		<script type="text/javascript" src="system/graph-init.js"></script>
