@@ -2,7 +2,7 @@ Options +FollowSymLinks
 Options -Indexes
 IndexIgnore *
 RewriteEngine on
-RewriteBase /znasichdani
+RewriteBase /Work/Znasichdani/znasichdani/
 #RewriteBase /x/znasichdani/
 
 # force www
