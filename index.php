@@ -3,7 +3,7 @@ error_reporting(E_ERROR | E_PARSE);
 
 $remote		= 'http://www.urtd.net/x/znasichdani/';
 $local		= 'http://localhost:8888/Work/Znasichdani/znasichdani/';
-$root		=  $_SERVER['SERVER_NAME']=='localhost' ? $local : $remote;
+$root		= $_SERVER['SERVER_NAME']=='localhost' ? $local : $remote;
 
 $var1		= !empty($_GET['var1']) ? $_GET['var1'] : 'home';
 $var2		= $_GET['var2'];
