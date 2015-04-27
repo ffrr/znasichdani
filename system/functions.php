@@ -2,6 +2,7 @@
 
 function menu($menu) {
 	global $var1;
+	global $root;
 	foreach($menu as $var => $val) {
 		$active	= $var == $var1 ? 'active' : '';
 		$url	= $var == 'help' ? '#' : "{$root}$var";

@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
+
 $remote		= 'http://www.urtd.net/x/znasichdani/';
 $local		= 'http://localhost:8888/Work/Znasichdani/znasichdani/';
 $root		= $_SERVER['SERVER_NAME']=='localhost' ? $local : $remote;
@@ -7,6 +9,8 @@ $var1		= !empty($_GET['var1']) ? $_GET['var1'] : 'home';
 $var2		= $_GET['var2'];
 $var3		= $_GET['var3'];
 $q			= $_GET['q'];
+
+
 
 if($_POST['submit']) { echo "<SCRIPT LANGUAGE=JavaScript>location='{$root}results?q=$_POST[query]'</SCRIPT>"; }
 
@@ -23,6 +27,7 @@ include('system/functions.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="shortcut icon" href="favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="system/style.css"/>
+		<link rel="stylesheet" type="text/css" href="system/graph.min.css"/>
 		<!--[if lt IE 8]>
 			<link rel="stylesheet" type="text/css" href="system/ie.css"/>
 		<![endif]-->
@@ -76,13 +81,15 @@ include('system/functions.php');
 				?>
 			</ul>
 		</footer>
-		
+
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="system/fancybox/jquery.fancybox.js"></script>
 		<script type="text/javascript" src="system/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 		<script type="text/javascript" src="system/jquery.tablesorter.min.js"></script>
 		<script type="text/javascript" src="system/jquery.stickem.js"></script>
 		<script type="text/javascript" src="system/functions.js"></script>
+
+
 		
 	</body>
 
