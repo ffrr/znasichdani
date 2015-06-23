@@ -160,7 +160,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <div id="data">
 
-	<section class="">
+	<section class="active">
 		<h3 class="desktop"><a href="#">Hodnota štátnych tendrov pre nájdené firmy <i>2005 – 2013</i></a></h3>
 		<div>
 			<div id="pie">
