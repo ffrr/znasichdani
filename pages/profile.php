@@ -243,7 +243,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 	</div>
 	<p><b>Firmy súvisiace s hľadanou osobou nevyhrali v minulosti žiadne státne tendre.</b></p>
 	<p class="disclaimer">Edit: Budeme musiet tento disclauimer my este torchu rozsirit, lebo zistujem zo staznosti pouzivatelov, ze im vadi, ked zo stranky nie je jasne, ze vo firme uz neposobia. Kedze pri firmach bez obstaravani nechcem zobrazovat ziadne grafy (a teda ani graf toho, kedy posobili vo firmach), budem to tam musiet nejak napisat. Cize rataj pls s tym, ze rozsah textu, ktory tam niekde budeme musiet vtrepat, je nie jedna veta, ale tak 2 - 3.</p>
-	<a href="#" id="share" class="icon desktop">Zdieľať <?php sprite('share'); ?></a>
+	<a href="#" id="share" class="icon desktop addthis_button_compact">Zdieľať <?php sprite('share'); ?></a>
 </section>
 
 <div id="data">
