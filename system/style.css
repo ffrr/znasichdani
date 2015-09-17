@@ -45,7 +45,7 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .services li a				{ line-height:20px; color:#fff; text-align:center; padding:10px; }
 .services svg				{ width:20px; height:20px; fill:#fff; display:inline-block; float:none; vertical-align:top; }
 
-#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#57a1af; background-color:rgba(87,161,175,0.9); }
+#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#57a1af; background-color:rgba(87,161,175,0.9); background-color:#267; background-color:rgba(34,102,119,0.9); }
 #overlay div				{ box-shadow:0 5px 10px rgba(0,0,0,0.25); border-radius:5px; padding:20px; font-size:15px; background-color:#fff; width:400px; height:200px; position:absolute; top:50%; left:50%; margin-top:-125px; margin-left:-200px; }
 #overlay a					{ width:auto; position:absolute; bottom:20px; right:20px; margin:0; }
 .help						{ display:inline-block; float:none; margin:0 5px; vertical-align:middle; width:20px; height:20px; position:relative; }
@@ -214,9 +214,11 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #data h3.fixed + div		{ padding-top:60px; }
 #data h3.static + div		{ padding-top:60px; }
 #data h4					{ font-size:15px; padding:20px; text-align:center; font-weight:normal; }
+#data h4 a					{ color:#fff; display:inline; float:none; }
+#data h4 a:hover			{ color:#93cbd3; }
 
 .dim						{ position:relative; }
-.dim:before					{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; z-index:1000; display:block; float:left; background-color:#57a1af; opacity:0.9; }
+.dim:before					{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; z-index:1000; display:block; float:left; opacity:0.9; background-color:#57a1af; background-color:#267; }
 
 #pie						{ background-color:#1f5a6b; }
 #pie li						{ width:auto; padding-bottom:0; }
@@ -282,9 +284,8 @@ header li a.active			{ font-weight:bold; color:#fff; }
 
 footer						{ position:relative; }
 footer div div				{ width:20%; padding-right:20px; }
-#medal						{ width:60px; height:auto; display:block; float:left; position:absolute; top:0; right:50px; }
-#medal div					{ font-weight:normal; }
-
+#medal						{ width:100px; text-indent:-10000px; height:120px; display:block; float:left; position:absolute; top:0; right:20px; background:transparent url('open_data_challenge.png') no-repeat 50% top; background-size:100px 240px; }
+#medal:hover				{ background-position:50% -120px; }
 /* RESPONSIVE */
 
 

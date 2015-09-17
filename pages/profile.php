@@ -194,7 +194,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 	<section class="desktop">
 		<h3><a href="#">Ktoré verejné inštitúcie tendre organizovali?</a></h3>
-		<div><?php generateTable($companies_head,$companies_data); ?></div>
+		<div><?php generateTable($companies_head,$companies_data,false); ?></div>
 	</section>
 
 	<section class="desktop">
@@ -203,7 +203,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 			<?php
 			foreach($tenders_data as $company => $data) {
 				$c = explode(';',$company);
-				echo "<h4><b>$c[0]</b>   $c[1]   IČO <b>$c[2]</b></h4>";
+				echo "<h4><a href=\"#\" class=\"icon\"><b>$c[0]</b>   $c[1]   IČO <b>$c[2]</b> ".sprite('external',true)."</a></h4>";
 				generateTable($tenders_head,$data);
 			}
 			?>

@@ -68,7 +68,7 @@ include('system/functions.php');
 					<div><b>Aliancia Fair-play</b><br/>Smrečianska 21<br/>811 05 Bratislava</div>
 					<div><b>+421 220 739 919</b><br/>V pracovné dni medzi 10.00 a 18.00</div>
 					<div><a href="mailto:znasichdani@fair-play.sk">znasichdani@fair-play.sk</a></div>
-					<a href="http://fair-play.sk/articles/ts-znasichdani-sk-je-najlepsou-europskou-aplikaciou" target="_blank" id="medal" class="help"><div>The best open-data app according to the biggest EU open-data competition.</div><img src="system/open_data_challenge.png" alt="Open Data Challenge 1st Place"/></a>
+					<a href="http://fair-play.sk/articles/ts-znasichdani-sk-je-najlepsou-europskou-aplikaciou" target="_blank" id="medal">The best open-data app according to the biggest EU open-data competition.</a>
 				</span>
 			</div>
 			<ul class="services">
