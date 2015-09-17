@@ -40,6 +40,8 @@ include('system/functions.php');
 		<!--[if lt IE 8]>
 			<div class="x">Táto stránka nie je optimalizovaná pre prehliadač Internet Explorer 7 alebo starší. Prosím, nainštalujte si <a href="http://www.whatbrowser.org/intl/sk/">moderný prehliadač.</a></div>
 		<![endif]-->
+		
+		<!--[if gte IE 8]><!-->
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-551d5aeb5669990e" async="async"></script>
 		<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 		
@@ -89,7 +91,7 @@ include('system/functions.php');
 		<script type="text/javascript" src="system/jquery.stickem.js"></script>
 		<script type="text/javascript" src="system/functions.js"></script>
 
-
+		<!--<![endif]-->
 		
 	</body>
 
