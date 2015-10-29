@@ -1,4 +1,4 @@
-<section id="main">
+<section id="main" class="home">
 	<h2 class="block">
 		<b>Preklepnite si ľudí.</b><br/>
 		Zistite, či a za koľko obchodujú so štátom.

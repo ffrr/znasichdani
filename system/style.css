@@ -120,6 +120,7 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #main p						{ font-size:20px; margin-top:20px; line-height:140%; }
 #main .disclaimer			{ font-size:13px; }
 #share						{ position:absolute; right:20px; bottom:20px; }
+.home						{ padding:5%; }
 #at20mc	*					{ height:auto; }
 
 .profile					{ padding-top:30px; }
@@ -153,6 +154,7 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #projects a					{ color:#57a1af; font-weight:normal; }
 #projects a:hover			{ color:#267; }
 #projects strong			{ color:#267; font-size:20px; line-height:100%; }
+#projects h2				{ font-size:20px; letter-spacing:0; padding-bottom:10px; }
 
 #results>div				{ width:40%; }
 #results>div:first-child	{ width:60%; border-right:1px solid #c2e3e8; }
@@ -294,6 +296,7 @@ footer div div				{ width:20%; padding-right:20px; }
 .list, .list li				{ padding:15px; }
 h2							{ font-size:30px; }
 #main>p						{ font-size:18px; }
+.home						{ padding:2.5%; }
 #top-people li				{ width:33.33333%; }
 #top-people .n7, #top-people .n8	{ display:none; }
 #top-people .n4				{ clear:left; }
@@ -334,6 +337,7 @@ footer div div				{ width:100%; }
 }
 
 @media screen and (max-width: 320px) {
+.home						{ padding:0; }
 #top-people li				{ width:50%; }
 #pie li						{ width:50%; padding-right:0; }
 #pie label					{ width:100%; }
