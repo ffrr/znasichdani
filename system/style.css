@@ -149,7 +149,7 @@ header li a.active			{ font-weight:bold; color:#fff; }
 /* BODY */
 
 
-#projects li				{ width:25%; }
+#projects li				{ width:20%; }
 #projects span				{ display:block; float:left; width:100%; padding:20px; border:1px solid #f4f4f4; margin-bottom:20px; }
 #projects a					{ color:#57a1af; font-weight:normal; }
 #projects a:hover			{ color:#267; }
@@ -191,13 +191,20 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #notes .question			{ font-size:15px; font-weight:bold; padding-left:30px; position:relative; }
 #notes .question svg		{ fill:#145; position:absolute; width:20px; height:20px; left:0; top:0; }
 
-.text>*						{ width:80%; margin-bottom:20px; padding-left:20%; line-height:180%; }
-.text h3					{ font-size:20px; }
+.text > *					{ width:80%; margin-bottom:20px; padding-left:20%; line-height:180%; }
+.text h3					{ font-size:20px; line-height:120%; margin-top:20px; }
 .text p, .text h4			{ font-size:15px; }
 .text a						{ color:#267; border-bottom:1px solid #c2e3e8; }
 .text a:hover				{ color:#145; border-bottom-color:#57a1af; }
 .text .graphics				{ margin:20px 0 40px 0; }
 
+
+#faq ul						{ width:25%; }
+#faq li						{ border-bottom:1px solid #c2e3e8; }
+#faq li a					{ font-weight:normal; font-size:15px; padding:10px 0; }
+#faq li a.active			{ font-weight:bold; }
+#faq .text					{ width:75%; padding-top:50px; }
+#faq .text > *				{ padding-left:0; }
 
 /* DATA */
 
@@ -315,6 +322,7 @@ header li a					{ line-height:50px; padding:0; }
 .block						{ padding:20px; }
 .list, .list li				{ padding:10px; }
 h2							{ font-size:24px; letter-spacing:-1px; }
+#faq > *					{ width:100% !important; }
 #search a					{ display:none; } 
 #main>p						{ font-size:15px; }
 #main>form					{ width:100%; }
@@ -322,6 +330,7 @@ h2							{ font-size:24px; letter-spacing:-1px; }
 #steps>li					{ width:100% !important; display:block; float:left; padding:0; }
 #steps>li:after				{ display:none; }
 #projects li				{ width:50%; }
+#projects li:nth-child(odd)	{ clear:left; }
 #results li>a span			{ float:none; display:inline; }
 #results>div				{ width:100%; }
 #results>div:first-child	{ width:100%; border:none; border-bottom:1px solid #c2e3e8; }

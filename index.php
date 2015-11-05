@@ -15,6 +15,7 @@ $q			= $_GET['q'];
 if($_POST['submit']) { echo "<SCRIPT LANGUAGE=JavaScript>location='{$root}results?q=$_POST[query]'</SCRIPT>"; }
 
 include('system/data.php');
+include('system/data-graph.php');
 include('system/functions.php');
 
 ?>
@@ -63,7 +64,7 @@ include('system/functions.php');
 		
 		<footer>
 			<div class="block">
-				<div><b>Aliancia Fair-play<br/>& Firemny-register.sk</b><br/>© 2011–2014</div>
+				<div><b>Aliancia Fair-play<br/>& Firemny-register.sk</b><br/>© 2011–2015<br/>Autor konceptu projektu: Peter Kunder</div>
 				<span class="desktop">
 					<div><b>Aliancia Fair-play</b><br/>Smrečianska 21<br/>811 05 Bratislava</div>
 					<div><b>+421 220 739 919</b><br/>V pracovné dni medzi 10.00 a 18.00</div>

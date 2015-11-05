@@ -1,14 +1,14 @@
 <section id="main" class="home">
 	<h2 class="block">
-		<b>Preklepnite si ľudí.</b><br/>
-		Zistite, či a za koľko obchodujú so štátom.
+		<b>Preklepnite si, kto vyhráva tendre od štátu</b><br/>
+		Za milióny alebo za pár eur? Pravidelne alebo raz za čas? S jednou firmou či s mnohými?
 	</h2>
 	
 	<ul id="steps" class="block">
 		<li class="active wide">
 			<span class="desktop">1</span>
 			<form id="search" action="" method="POST">
-				<input type="text" name="query" value="Zadajte meno" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+				<input type="text" name="query" value="Zadajte meno osoby" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
 				<input type="submit" name="submit" value="Hľadať"/>
 			</form>
 			<div id="top-people">
@@ -24,7 +24,7 @@
 		</li>
 		<li class="desktop">
 			<span class="desktop">3</span>
-			<div>Pozrite, akú hodnotu mali štátne tendre spojené s hľadanou osobou.</div>
+			<div>Pozrite sa, akú hodnotu majú štátne tendre spojené s hľadanou osobou.</div>
 		</li>
 	</ul>
 	
