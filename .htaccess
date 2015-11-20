@@ -2,7 +2,7 @@ Options +FollowSymLinks
 Options -Indexes
 IndexIgnore *
 RewriteEngine on
-RewriteBase /Work/Znasichdani/znasichdani/
+RewriteBase /Work/Aliancia%20Fair-play/Znasichdani/znasichdani/
 #RewriteBase /x/znasichdani/
 
 # force www

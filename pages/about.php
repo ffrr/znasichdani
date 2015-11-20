@@ -8,7 +8,7 @@
 		foreach($about as $i) {
 			$answer	= str_replace("\n\n",'</p><p>',$i[2]);
 			$answer	= str_replace("\n",'<br/>',$answer);
-			echo "<h3 id=\"$i[1]\">$i[0]</h3><p>$answer</p>";
+			echo "<h3 id=\"$i[1]\" title=\"#$i[1]\">$i[0]</h3><p>$answer</p>";
 		}
 		?>
 	</div>

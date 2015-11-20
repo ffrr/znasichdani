@@ -27,7 +27,7 @@ $projects = array(
 
 $about = array(
 
-array('Na čo slúži ZnašichDaní.sk?', 'about',
+array('Na čo slúži ZNašichDaní.sk?', 'about',
 'ZNašichDaní ukazuje, firmy ktorých podnikateľov získavajú najväčšie zákazky od štátu.
 
 Vďaka Vestníku verejného obstarávania dokážeme sledovať toky verejných peňazí od štátu k firmám. Väčší problém je vystopovať financie až ku konkrétnym osobám, ktoré stoja za týmito spoločnosťami. Pokusy odhaliť ich boli dlho veľmi pracné aj pre skúsených investigatívnych novinárov.
@@ -71,7 +71,7 @@ ZNašichDaní.sk započítava všetky zákazky, ktoré firmy spojené s hľadano
 Dôvodom, prečo na menovcov nedokážeme upozorniť, je, že databáza osôb a firiem, ktorú preberáme z Obchodného registra SR,  neposkytuje unikátne identifikátory osôb - konkrétne osoby teda nedokážeme so stopercentnou istotou určiť ani my. (Prečo? <a href="'.$root.'faq/processing">Prečítajte si, ako pracujeme s dátami.</a>)',
 )),
 
-array('Koho nájdete na ZnašichDaní', 'results', array(
+array('Koho nájdete na ZNašichDaní', 'results', array(
 
 'Aké osoby je možné vyhľadať?' => 'Vyhľadávať je možné osoby, ktoré vystupujú v akomkoľvek subjekte, ktorý je vedený v Obchodnom registri SR. Pre obchodné spoločnosti je to napríklad spoločník, štatutár, konateľ, člen dozornej rady atď.',
 

@@ -19,7 +19,7 @@ foreach($faq as $i) {
 ?>
 
 <section id="main" class="block">
-	<h2 class="offset"><b>FAQ</b></h2>
+	<h2 class="offset"><b>Často kladené otázky</b></h2>
 </section>
 
 <section id="faq">
