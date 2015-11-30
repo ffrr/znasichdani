@@ -59,6 +59,19 @@ Používaním ZNašichDaní.sk súhlasíte so zberom anonymných štatistík pou
 );
 
 
+$donors = array(
+'Donori' => array(
+	'nf						EEA Grants						http://www.google.com/',
+	'osf					Open Society Foundations		http://www.google.com/',
+	'osf-sk					Nadácia otvorenej spoločnosti	http://www.google.com/',
+),
+'Podporovatelia' => array(
+	'digmia					Digmia							http://www.google.com/',
+	'open_data_challenge	Open Data Challenge				http://www.google.com/',
+)
+);
+
+
 $faq = array(
 
 array('Vyhľadávanie', 'searching', array(

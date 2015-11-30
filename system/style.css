@@ -198,6 +198,9 @@ header li a.active			{ font-weight:bold; color:#fff; }
 .text a:hover				{ color:#145; border-bottom-color:#57a1af; }
 .text .graphics				{ margin:20px 0 40px 0; }
 
+#logos						{ text-align:center; padding-top:40px; }
+#logos li					{ width:20%; float:none; display:inline-block; }
+#logos a					{ border:none; padding:10px; }
 
 #faq ul						{ width:25%; }
 #faq li						{ border-bottom:1px solid #c2e3e8; }
@@ -343,6 +346,7 @@ h2							{ font-size:24px; letter-spacing:-1px; }
 .text>*, .offset			{ width:100% !important; padding-left:0 !important; }
 footer div div				{ width:100%; }
 #overlay					{ display:none; }
+#logos li					{ width:33.33333%; }
 }
 
 @media screen and (max-width: 320px) {
