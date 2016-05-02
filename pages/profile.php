@@ -16,7 +16,7 @@ foreach($data_graph as $co => $data) {
 	$percent		= round($sum/$total*100);
 	$_sum			= comma($sum).' €';
 	$_limit			= $sum_run/$total*100;
-	
+
 	//if($_limit > $limit) {
 	if($n >= $count) {
 		$group_sum+= $sum;
@@ -34,22 +34,22 @@ foreach($data_graph as $co => $data) {
 		$hidden			= '';
 		$toggle			= false;
 	}
-	
+
 	$color	= " style=\"color:#$data_colors[$n]\"";
 	$bcolor	= " style=\"background-color:#$data_colors[$n]\"";
-	
+
 	$bullet = "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"12px\" height=\"12px\" viewBox=\"0 0 12 12\" enable-background=\"new 0 0 12 12\" xml:space=\"preserve\"><circle cx=\"6\" cy=\"6\" r=\"6\" fill=\"#$data_colors[$n]\"/></svg>";
-	
+
 	// labels
 	$labels.= "<li class=\"company $active $hidden\">
 		<label>
 			<input type=\"checkbox\" name=\"$n\" data-sum=\"$sum\"><b$color>$bullet $co<br/>{$percent}%</b> $_sum
 		</label>
 	</li>";
-	
+
 	// stripe parts
 	$parts.= "<div id=\"part-$n\"$bcolor class=\"$hidden\"></div>";
-	
+
 	// mobile view
 	foreach($data[1] as $position => $_ints) {
 		$ints	= explode('|',$_ints);
@@ -64,12 +64,12 @@ foreach($data_graph as $co => $data) {
 				$timelines.= "<div style=\"background-color:#$data_colors[$n]; left:{$left}%; width:{$width}%;\"></div>";
 			}
 		}
-		
+
 		$_ints		= explode(':',$_ints);
 		$interupted	= count($_ints) > 2 ? ' *' : '';
 		$from		= $_ints[0];
 		$to			= end($_ints);
-		
+
 		$from = explode('-',$from);
 		$from = $from[2].'. '.$from[1].'. '.$from[0];
 		if(!empty($to)) {
@@ -78,40 +78,40 @@ foreach($data_graph as $co => $data) {
 		} else {
 			$to = 'súčasnosť';
 		}
-		
+
 		$positions.="<li>
 			<span><div>$position</div><div class=\"right\">$from — $to$interupted</div></span>
 			<div class=\"timeline\">$timelines</div>
 		</li>";
-		
+
 		unset($timelines);
 	}
-	
+
 	$year_key	= array_search($year,$data_years);
 	$year_sum	= $year_key !== false ? comma($data[0][$year_key]).' €' : '0.00 €';
 	$year_total+= $year_sum;
-	
+
 	$mobile.= "<li>
 		<span><div><b$color>$co</b></div><div class=\"right\"><b$color>{$percent}%</b> $year_sum</div></span>
 		<ul class=\"positions\">$positions</ul>
 	</li>";
 	unset($positions);
-	
+
 	//
 	$n			+= 1;
 	$sum_run	+= $sum;
 }
 
 if($toggle) {
-	
+
 	$labels.= "<li id=\"group\" class=\"company active group\">
 		<label>
 			<input type=\"checkbox\" name=\"group\" data-sum=\"$group_sum\"><b style=\"color:#fff\">Ostatné firmy <i>$group_count</i><br/>".round($group_sum/$total * 100)."%</b> ".comma($group_sum)." €
 		</label>
 	</li>";
-	
+
 	$parts.= "<div id=\"part-group\" style=\"background-color:#fff\" class=\"group\"></div>";
-	
+
 	$grouper = "<li class=\"desktop\">
 		<a href=\"#\" id=\"break-group\" class=\"icon\">Zobraziť všetky ". sprite('show-more',true)."</a>
 		<a href=\"#\" id=\"join-group\" class=\"icon\">".sprite('show-less',true)." Zobraziť menej</a>
@@ -163,7 +163,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 	<section class="">
 		<h3 class="desktop"><a href="#">Hodnota štátnych tendrov pre nájdené firmy <i>2005 – 2013</i></a></h3>
 		<div>
-			<div id="pie">
+			<!-- <div id="pie">
 				<?php help('Help #3','Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href=\"#\">Viac...</a>'); ?>
 				<ul class="list">
 					<?php echo $labels; echo $grouper; ?>
@@ -176,16 +176,17 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 					<div class="label">0 €</div>
 					<div class="label" id="total"></div>
 				</div>
-			</div>
-			<div id="graph" class="znd-graph block desktop">
+			</div> -->
+			<div id="pie"></div>
+			<div id="graph" class="znd-graph"> <!-- block desktop -->
+				<h3 class="bar-title">Celkový objem tendrov</h3>
 				<div class="bar"></div>
+				<h3 class="timeline-title">Účinkovanie osoby vo firmách v jednotlivých rokoch</h3>
 				<div class="navigable">
 					<div class="area"></div>
-			 		<div class="timeline">
-						<div class="d3-tip d3-tip-custom n">Toto je popiska kurzora.</div>
-				  	</div>    
-					<div class="pan left"><span>&lt;</span></div>
-					<div class="pan right"><span>&gt;</span></div>
+					<div class="timeline">
+						<div class="d3-tip d3-tip-custom n"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -214,12 +215,12 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 		<h3><a href="#">Zoznam firiem spojených s osobou, ktoré neboli úspešné v štátnych tendroch</a></h3>
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
 	</section>
-	
-	<section class="mobile active">
+
+	<!-- <section class="mobile active">
 		<div id="years" class="block"><?php echo "<div class=\"block\">$year_prev</div><h3>$year<br/><i>".comma($year_total)." €</i></h3><div class=\"block\">$year_next</div>" ?></div>
 		<ul id="mobile"><?php echo $mobile; ?></ul>
 		<div class="block">* Pôsobenie na danej pozícii bolo v minulosti dočasne prerušené.</div>
-	</section>
+	</section> -->
 
 </div>
 
@@ -253,7 +254,88 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 	</section>
 </div>
 
-<!-- graph relate -->
+<!-- graph templates -->
 
-		<script type="text/javascript" src="system/znd-graph.min.js"></script>
-		<script type="text/javascript" src="system/graph-init.js"></script>
+<script type="text/template" class="template" id="tpl-controls">
+		<ul class="list">
+		<% _.each(model, function(item) {%>
+			<li data-series="<%= item.seriesName %>" class="company active"><!-- active hidden group -->
+				<label style="color: white;">
+					<input type="checkbox">
+					<b style="color: <%= item.color %>">
+						<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">
+							<circle cx="6" cy="6" r="6" fill="<%= item.color %>"></circle>
+						</svg>
+						<%= item.seriesName %>
+						<i><%= item.aggregatedCount %></i>
+						<br/><%= item.percentage %>%
+					</b>
+					<%= item.sum %>
+				</label>
+			</li>
+		<% }); %>
+		<li class="desktop">
+			<a href="#" id="break-group" class="icon">
+				Zobraziť všetky
+				<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#show-more"></use></svg>
+			</a>
+			<a href="#" id="join-group" class="icon">
+				<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#show-less"></use></svg>
+				Zobraziť menej
+			</a>
+		</li>
+	</ul>
+</script>
+
+<script type="text/template" class="template" id="tpl-navig-desktop">
+	<div class="navigation" id="navig-desktop">
+			<div class="pan back"><span><svg>
+					<use width="60%" height="60%" x="10" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#year-prev"></use>
+				</svg></span></div>
+			<div class="pan forward"><span><svg >
+					<use width="60%" height="60%" x="5" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#year-next"></use>
+				</svg></span></div>
+	</div>
+</script>
+
+
+<script type="text/template" class="template" id="tpl-navig-mobile">
+	<div class="navigation" id="navig-mobile">
+	<div id="years" class="block">
+		<div class="block back">
+			<% if (prevYear) { %><a class="icon">
+				<svg>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#year-prev"></use>
+				</svg><%= prevYear %>
+			</a><% } %>
+		</div>
+		<h3><%= currentYear %> <br/> <i><%= currentTotal %></i></></h3>
+
+		<div class="block forward">
+			 <% if (nextYear) { %><a class="icon"><%= nextYear %>
+				<svg>
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#year-next">
+					</use>
+				</svg>
+			</a><% } %>
+		</div>
+	</div>
+	</div>
+</script>
+
+<script type="text/template" class="template" id="tpl-tooltip">
+	<ul>
+		<% _.each(model, function(itemData) {%>
+		<li>
+			<span class="bullet" style="color: <%= itemData.color %>"><span>&#8226;</span></span>
+			<em class="company"><%= itemData.company %></em>
+			<span class="amount"><%= itemData.amount %></span>
+		</li>
+		<% }); %>
+	</ul>
+</script>
+
+<!-- graph impl  -->
+<script type="text/javascript" src="system/znd-graph.min.js"></script>
+<script type="text/javascript" src="system/znd-graph-testdata.js"></script>
+<script type="text/javascript" src="system/znd-graph-init.js"></script>
