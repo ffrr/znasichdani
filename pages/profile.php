@@ -178,6 +178,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 				</div>
 			</div> -->
 			<div id="pie"></div>
+			
 			<div id="graph" class="znd-graph"> <!-- block desktop -->
 				<h3 class="bar-title">Celkový objem tendrov</h3>
 				<div class="bar"></div>
