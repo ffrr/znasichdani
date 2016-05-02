@@ -160,7 +160,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <div id="data">
 
-	<section class="">
+	<section class="active">
 		<h3 class="desktop"><a href="#">Hodnota štátnych tendrov pre nájdené firmy <i>2005 – 2013</i></a></h3>
 		<div>
 			<!-- <div id="pie">
@@ -195,16 +195,16 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 	<section class="desktop">
 		<h3><a href="#">Ktoré verejné inštitúcie tendre organizovali?</a></h3>
-		<div><?php generateTable($companies_head,$companies_data); ?></div>
+		<div><?php generateTable($companies_head,$companies_data,false); ?></div>
 	</section>
 
 	<section class="desktop">
-		<h3><a href="#">Pozrite si jednotlivé tendre</a></h3>
+		<h3><a href="#">Zoznam tendrov</a></h3>
 		<div>
 			<?php
 			foreach($tenders_data as $company => $data) {
 				$c = explode(';',$company);
-				echo "<h4><b>$c[0]</b>   $c[1]   IČO <b>$c[2]</b></h4>";
+				echo "<h4><a href=\"#\" class=\"icon\"><b>$c[0]</b>   $c[1]   IČO <b>$c[2]</b> ".sprite('external',true)."</a></h4>";
 				generateTable($tenders_head,$data);
 			}
 			?>
@@ -212,7 +212,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 	</section>
 
 	<section class="desktop">
-		<h3><a href="#">Zoznam firiem spojených s osobou, ktoré neboli úspešné v štátnych tendroch</a></h3>
+		<h3><a href="#">Firmy bez štátnych tendrov</a></h3>
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
 	</section>
 
@@ -242,14 +242,14 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 		<h2>0 €</h2><br/>
 		<b>Hodnota štátnych tendrov</b> za roky 2005 – 2013
 	</div>
-	<p><b>Firmy súvisiace s hľadanou osobou nevyhrali v minulosti žiadne státne tendre.</b></p>
-	<p class="disclaimer">Edit: Budeme musiet tento disclauimer my este torchu rozsirit, lebo zistujem zo staznosti pouzivatelov, ze im vadi, ked zo stranky nie je jasne, ze vo firme uz neposobia. Kedze pri firmach bez obstaravani nechcem zobrazovat ziadne grafy (a teda ani graf toho, kedy posobili vo firmach), budem to tam musiet nejak napisat. Cize rataj pls s tym, ze rozsah textu, ktory tam niekde budeme musiet vtrepat, je nie jedna veta, ale tak 2 - 3.</p>
-	<a href="#" id="share" class="icon desktop">Zdieľať <?php sprite('share'); ?></a>
+	<p><b>Firmy súvisiace s hľadanou osobou nevyhrali v minulosti žiadne štátne tendre.</b></p>
+	<p class="disclaimer">Hľadaná osoba mohla v nájdených firmách v minulosti pôsobiť iba krátkodobo - vo vlastníckej alebo riadiacej pozícii alebo v niektorom z orgánov spoločnosti. Podrobnosti o firmách nájdete po odkliku z názvu firmy na Firemny-Register.sk. Overte si, čím sa firma zaoberá a kedy hľadaná osoba vo firme pôsobila.</p>
+	<a href="#" id="share" class="icon desktop addthis_button_compact">Zdieľať <?php sprite('share'); ?></a>
 </section>
 
 <div id="data">
 	<section class="active">
-		<h3><a href="#">Zoznam firiem spojených s osobou, ktoré neboli úspešné v štátnych tendroch</a></h3>
+		<h3><a href="#">Firmy bez štátnych tendrov</a></h3>
 		<div><?php generateTable($companies_head,$companies_data); ?></div>
 	</section>
 </div>

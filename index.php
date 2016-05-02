@@ -2,7 +2,7 @@
 error_reporting(E_ERROR | E_PARSE);
 
 $remote		= 'http://www.urtd.net/x/znasichdani/';
-$local		= 'http://localhost:8888/Work/Znasichdani/znasichdani/';
+$local		= 'http://localhost:8888/Work/Aliancia%20Fair-play/Znasichdani/znasichdani/';
 $root		= $_SERVER['SERVER_NAME']=='localhost' ? $local : $remote;
 
 $var1		= !empty($_GET['var1']) ? $_GET['var1'] : 'home';
@@ -15,6 +15,7 @@ $q			= $_GET['q'];
 if($_POST['submit']) { echo "<SCRIPT LANGUAGE=JavaScript>location='{$root}results?q=$_POST[query]'</SCRIPT>"; }
 
 include('system/data.php');
+include('system/data-graph.php');
 include('system/functions.php');
 
 ?>
@@ -40,6 +41,8 @@ include('system/functions.php');
 		<!--[if lt IE 8]>
 			<div class="x">Táto stránka nie je optimalizovaná pre prehliadač Internet Explorer 7 alebo starší. Prosím, nainštalujte si <a href="http://www.whatbrowser.org/intl/sk/">moderný prehliadač.</a></div>
 		<![endif]-->
+		
+		<!--[if gte IE 8]><!-->
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-551d5aeb5669990e" async="async"></script>
 		<div id="fb-root"></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 		
@@ -61,12 +64,12 @@ include('system/functions.php');
 		
 		<footer>
 			<div class="block">
-				<div><b>Aliancia Fair-play<br/>& Firemny-register.sk</b><br/>© 2011–2014</div>
+				<div><b>Aliancia Fair-play<br/>& Firemny-register.sk</b><br/>© 2011–2015<br/>Autor konceptu projektu: <a href="http://www.fair-play.sk/abouts/bios/8" target="_blank">Peter Kunder</a></div>
 				<span class="desktop">
 					<div><b>Aliancia Fair-play</b><br/>Smrečianska 21<br/>811 05 Bratislava</div>
 					<div><b>+421 220 739 919</b><br/>V pracovné dni medzi 10.00 a 18.00</div>
 					<div><a href="mailto:znasichdani@fair-play.sk">znasichdani@fair-play.sk</a></div>
-					<a href="http://fair-play.sk/articles/ts-znasichdani-sk-je-najlepsou-europskou-aplikaciou" target="_blank" id="medal" class="help"><div>The best open-data app according to the biggest EU open-data competition.</div><img src="system/open_data_challenge.png" alt="Open Data Challenge 1st Place"/></a>
+					<a href="http://fair-play.sk/articles/ts-znasichdani-sk-je-najlepsou-europskou-aplikaciou" target="_blank" id="medal">The best open-data app according to the biggest EU open-data competition.</a>
 				</span>
 			</div>
 			<ul class="services">
@@ -89,7 +92,7 @@ include('system/functions.php');
 		<script type="text/javascript" src="system/jquery.stickem.js"></script>
 		<script type="text/javascript" src="system/functions.js"></script>
 
-
+		<!--<![endif]-->
 		
 	</body>
 

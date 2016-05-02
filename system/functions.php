@@ -45,14 +45,16 @@ function collumns($input) {
 	return($output);
 }
 
-function generateTable($head,$data) {
+function generateTable($head,$data,$links = true) {
 	echo "<table><thead><tr>".collumns($head)."</tr></thead><tbody>";
 	foreach($data as $i) {
 		$i = explode("\t",preg_replace("/\t+/","\t",$i));
 		echo "<tr>";
+		$x = 0;
 		foreach($i as $n) {
+			$x += 1;
 			$class = strpos($n,'EUR') || strpos($n,'SKK') ? " class=\"right\"" : '';
-			if(strpos($n,'-VZT') || strpos($n,'-VST')) { $n = "<a href=\"#\" class=\"icon\">$n ".sprite('external',true)."</a>"; }
+			if($x == 1 && $links) { $n = "<a href=\"#\" class=\"icon\">$n ".sprite('external',true)."</a>"; }
 			echo "<td$class>$n</td>";
 		}
 		echo "</tr>";

@@ -9,11 +9,11 @@
 		</li>
 		<li class="active">
 			<span class="desktop">2</span>
-			<div>Našli sme <b>15 osôb s menom <?php echo $q; ?></b>. Podľa adresy alebo súvisiacich firiem vyberte osobu, ktorá vás najviac zaujíma.</div>
+			<div>Našli sme <b>15 osôb s menom <?php echo $q; ?></b>. Podľa adresy alebo súvisiacich firiem vyberte osobu, ktorá vás zaujíma.</div>
 		</li>
 		<li class="desktop">
 			<span class="desktop">3</span>
-			<div>Pozrite, akú hodnotu mali štátne tendre spojené s hľadanou osobou.</div>
+			<div>Pozrite sa, akú hodnotu majú štátne tendre spojené s hľadanou osobou.</div>
 		</li>
 	</ul>
 </section>
@@ -54,9 +54,9 @@
 	</div>
 	<div class="block" id="notes">
 		<?php
-		foreach($notes as $i) {
-			$i = explode("\t",preg_replace("/\t+/","\t",$i));
-			echo "<p class=\"question\">".sprite('tip',true)." $i[0]</p><p>$i[1]</p>";
+		foreach($notes as $q => $a) {
+			$a = str_replace("\n\n",'</p><p>',$a);
+			echo "<p class=\"question\">".sprite('tip',true)." $q</p><p>$a</p>";
 		}
 		?>
 	</div>
@@ -69,6 +69,6 @@
 		<input type="text" name="query" value="<?php echo $q; ?>"/>
 		<input type="submit" name="submit" value="Hľadať"/>
 	</form>
-	<h2>Je nám ľúto, nenašli sme žiadne osoby so zadaným menom. Skontrolujte si, či ste meno napísali správne, alebo skúste hľadať niečo iné.</h2>
-	<p>ZnašichDaní.sk vie momentálne vyhľadávať iba osoby. V prípade, že chcete overiť štátne tendre pre firmy, zadajte meno človeka, ktorý vo firme figuruje, alebo skústre vyhľadávať priamo vo <a href="#">Vestníku verejného obstarávania</a>.</p>
+	<h2>Je nám ľúto, nenašli sme žiadne osoby so zadaným menom. Skontrolujte, či ste meno napísali správne, alebo skúste hľadať niečo iné.</h2>
+	<p>ZNašichDaní.sk vie momentálne vyhľadávať iba osoby. V prípade, že hľadáte firmu, zadajte meno človeka, ktorý v nej figuruje, alebo skúste vyhľadávať priamo vo <a href="xxx">Vestníku verejného obstarávania</a>.</p>
 </section>

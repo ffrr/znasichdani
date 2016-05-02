@@ -45,7 +45,7 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 .services li a				{ line-height:20px; color:#fff; text-align:center; padding:10px; }
 .services svg				{ width:20px; height:20px; fill:#fff; display:inline-block; float:none; vertical-align:top; }
 
-#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#57a1af; background-color:rgba(87,161,175,0.9); }
+#overlay					{ position:fixed; z-index:10000; top:0; right:0; bottom:0; left:0; background-color:#57a1af; background-color:rgba(87,161,175,0.9); background-color:#267; background-color:rgba(34,102,119,0.9); }
 #overlay div				{ box-shadow:0 5px 10px rgba(0,0,0,0.25); border-radius:5px; padding:20px; font-size:15px; background-color:#fff; width:400px; height:200px; position:absolute; top:50%; left:50%; margin-top:-125px; margin-left:-200px; }
 #overlay a					{ width:auto; position:absolute; bottom:20px; right:20px; margin:0; }
 .help						{ display:inline-block; float:none; margin:0 5px; vertical-align:middle; width:20px; height:20px; position:relative; }
@@ -120,6 +120,8 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #main p						{ font-size:20px; margin-top:20px; line-height:140%; }
 #main .disclaimer			{ font-size:13px; }
 #share						{ position:absolute; right:20px; bottom:20px; }
+.home						{ padding:5%; }
+#at20mc	*					{ height:auto; }
 
 .profile					{ padding-top:30px; }
 .profile>div				{ width:auto; padding-right:40px; margin-bottom:20px; }
@@ -147,11 +149,12 @@ header li a.active			{ font-weight:bold; color:#fff; }
 /* BODY */
 
 
-#projects li				{ width:25%; }
+#projects li				{ width:20%; }
 #projects span				{ display:block; float:left; width:100%; padding:20px; border:1px solid #f4f4f4; margin-bottom:20px; }
 #projects a					{ color:#57a1af; font-weight:normal; }
 #projects a:hover			{ color:#267; }
 #projects strong			{ color:#267; font-size:20px; line-height:100%; }
+#projects h2				{ font-size:20px; letter-spacing:0; padding-bottom:10px; }
 
 #results>div				{ width:40%; }
 #results>div:first-child	{ width:60%; border-right:1px solid #c2e3e8; }
@@ -188,13 +191,23 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #notes .question			{ font-size:15px; font-weight:bold; padding-left:30px; position:relative; }
 #notes .question svg		{ fill:#145; position:absolute; width:20px; height:20px; left:0; top:0; }
 
-.text>*						{ width:80%; margin-bottom:20px; padding-left:20%; line-height:180%; }
-.text h3					{ font-size:20px; }
+.text > *					{ width:80%; margin-bottom:20px; padding-left:20%; line-height:180%; }
+.text h3					{ font-size:20px; line-height:120%; margin-top:20px; }
 .text p, .text h4			{ font-size:15px; }
 .text a						{ color:#267; border-bottom:1px solid #c2e3e8; }
 .text a:hover				{ color:#145; border-bottom-color:#57a1af; }
 .text .graphics				{ margin:20px 0 40px 0; }
 
+#logos						{ text-align:center; padding-top:40px; }
+#logos li					{ width:20%; float:none; display:inline-block; }
+#logos a					{ border:none; padding:10px; }
+
+#faq ul						{ width:25%; }
+#faq li						{ border-bottom:1px solid #c2e3e8; }
+#faq li a					{ font-weight:normal; font-size:15px; padding:10px 0; }
+#faq li a.active			{ font-weight:bold; }
+#faq .text					{ width:75%; padding-top:50px; }
+#faq .text > *				{ padding-left:0; }
 
 /* DATA */
 
@@ -213,9 +226,11 @@ header li a.active			{ font-weight:bold; color:#fff; }
 #data h3.fixed + div		{ padding-top:60px; }
 #data h3.static + div		{ padding-top:60px; }
 #data h4					{ font-size:15px; padding:20px; text-align:center; font-weight:normal; }
+#data h4 a					{ color:#fff; display:inline; float:none; }
+#data h4 a:hover			{ color:#93cbd3; }
 
 .dim						{ position:relative; }
-.dim:before					{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; z-index:1000; display:block; float:left; background-color:#57a1af; opacity:0.9; }
+.dim:before					{ content:''; position:absolute; top:0; right:0; bottom:0; left:0; z-index:1000; display:block; float:left; opacity:0.9; background-color:#57a1af; background-color:#267; }
 
 #pie						{ background-color:#1f5a6b; }
 #pie li						{ width:auto; padding-bottom:0; }
@@ -281,9 +296,8 @@ header li a.active			{ font-weight:bold; color:#fff; }
 
 footer						{ position:relative; }
 footer div div				{ width:20%; padding-right:20px; }
-#medal						{ width:60px; height:auto; display:block; float:left; position:absolute; top:0; right:50px; }
-#medal div					{ font-weight:normal; }
-
+#medal						{ width:100px; text-indent:-10000px; height:120px; display:block; float:left; position:absolute; top:0; right:20px; background:transparent url('open_data_challenge.png') no-repeat 50% top; background-size:100px 240px; }
+#medal:hover				{ background-position:50% -120px; }
 /* RESPONSIVE */
 
 
@@ -292,6 +306,7 @@ footer div div				{ width:20%; padding-right:20px; }
 .list, .list li				{ padding:15px; }
 h2							{ font-size:30px; }
 #main>p						{ font-size:18px; }
+.home						{ padding:2.5%; }
 #top-people li				{ width:33.33333%; }
 #top-people .n7, #top-people .n8	{ display:none; }
 #top-people .n4				{ clear:left; }
@@ -310,6 +325,7 @@ header li a					{ line-height:50px; padding:0; }
 .block						{ padding:20px; }
 .list, .list li				{ padding:10px; }
 h2							{ font-size:24px; letter-spacing:-1px; }
+#faq > *					{ width:100% !important; }
 #search a					{ display:none; } 
 #main>p						{ font-size:15px; }
 #main>form					{ width:100%; }
@@ -317,6 +333,7 @@ h2							{ font-size:24px; letter-spacing:-1px; }
 #steps>li					{ width:100% !important; display:block; float:left; padding:0; }
 #steps>li:after				{ display:none; }
 #projects li				{ width:50%; }
+#projects li:nth-child(odd)	{ clear:left; }
 #results li>a span			{ float:none; display:inline; }
 #results>div				{ width:100%; }
 #results>div:first-child	{ width:100%; border:none; border-bottom:1px solid #c2e3e8; }
@@ -328,9 +345,12 @@ h2							{ font-size:24px; letter-spacing:-1px; }
 #stripe						{ margin-top:15px; }
 .text>*, .offset			{ width:100% !important; padding-left:0 !important; }
 footer div div				{ width:100%; }
+#overlay					{ display:none; }
+#logos li					{ width:33.33333%; }
 }
 
 @media screen and (max-width: 320px) {
+.home						{ padding:0; }
 #top-people li				{ width:50%; }
 #pie li						{ width:50%; padding-right:0; }
 #pie label					{ width:100%; }
