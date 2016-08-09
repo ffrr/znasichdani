@@ -178,7 +178,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 				</div>
 			</div> -->
 			<div id="pie"></div>
-			
+
 			<div id="graph" class="znd-graph"> <!-- block desktop -->
 				<h3 class="bar-title">Celkový objem tendrov</h3>
 				<div class="bar"></div>
@@ -337,6 +337,6 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 </script>
 
 <!-- graph impl  -->
-<script type="text/javascript" src="system/znd-graph.min.js"></script>
+<script type="text/javascript" src="system/require.js"></script>
 <script type="text/javascript" src="system/znd-graph-testdata.js"></script>
-<script type="text/javascript" src="system/znd-graph-init.js"></script>
+<script type="text/javascript" src="system/znd-graph.min.js"></script>
