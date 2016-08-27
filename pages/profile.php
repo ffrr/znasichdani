@@ -338,5 +338,6 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <!-- graph impl  -->
 <script type="text/javascript" src="system/require.js"></script>
-<script type="text/javascript" src="system/znd-graph-testdata.js"></script>
+<script type="text/javascript" src="system/znd-graph-data.js"></script>
+<script type="text/javascript" src="system/znd-graph-config.js"></script>
 <script type="text/javascript" src="system/znd-graph.min.js"></script>
