@@ -11,7 +11,6 @@ define("znd-graph-config", [], function() {
         controlContainerSelector: "#pie",
         navigationContainerSelector: ".navigable",
 
-        groupingAggregateName: "Ostatné",
         visibleSegments: 5,
         groupingThreshold: 1,
 

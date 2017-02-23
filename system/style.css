@@ -68,6 +68,13 @@ h2							{ font-weight:normal; display:block; float:left; width:100%; font-size:
 	-moz-animation-iteration-count:10;
 	animation-iteration-count:10;
 }
+
+.timeline .help {
+  margin-left: 50%;
+  left: -10px;
+  top: 60px;
+}
+
 @-moz-keyframes pulse {
 	0% { -moz-transform:scale(0); opacity:0; }
 	50% { -moz-transform:opacity:0.5; }
@@ -326,7 +333,7 @@ header li a					{ line-height:50px; padding:0; }
 .list, .list li				{ padding:10px; }
 h2							{ font-size:24px; letter-spacing:-1px; }
 #faq > *					{ width:100% !important; }
-#search a					{ display:none; } 
+#search a					{ display:none; }
 #main>p						{ font-size:15px; }
 #main>form					{ width:100%; }
 .profile>div				{ text-align:left !important; width:100%; margin-bottom:20px; padding-right:0; }

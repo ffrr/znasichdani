@@ -186,6 +186,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 				<div class="navigable">
 					<div class="area"></div>
 					<div class="timeline">
+            <?php help('Help #3','Class aptent taciti sociosqu ad litora torquent per conubia nostra. <a href=\"#\">Viac...</a>'); ?>
 						<div class="d3-tip d3-tip-custom n"></div>
 					</div>
 				</div>
@@ -277,12 +278,12 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 		<% }); %>
 		<li class="desktop">
 			<a href="#" id="break-group" class="icon">
-				Zobraziť všetky
+				<%= more %>
 				<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#show-more"></use></svg>
 			</a>
 			<a href="#" id="join-group" class="icon">
 				<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="system/svg/sprite.svg#show-less"></use></svg>
-				Zobraziť menej
+				<%= less %>
 			</a>
 		</li>
 	</ul>
@@ -338,6 +339,7 @@ $year_next	= $year + 1 < $current ? "<a href=\"{$root}profile?q=$q&year=".($year
 
 <!-- graph impl  -->
 <script type="text/javascript" src="system/require.js"></script>
+<script type="text/javascript" src="system/znd-graph-locale.js"></script>
 <script type="text/javascript" src="system/znd-graph-data.js"></script>
 <script type="text/javascript" src="system/znd-graph-config.js"></script>
 <script type="text/javascript" src="system/znd-graph.min.js"></script>
